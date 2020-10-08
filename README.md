@@ -1,24 +1,14 @@
 # README
-
 This README would normally document whatever steps are necessary to get the
 application up and running.
-
 Things you may want to cover:
-
 * Ruby version
-
 * System dependencies
-
 * Configuration
-
 * Database creation
-
 * Database initialization
-
 * How to run the test suite
-
 * Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
 
 ## users
@@ -33,56 +23,4 @@ Things you may want to cover:
 |名前（かな）| first_name_kana | string   | null: false    |
 |生年月日| birth_day   | date     | null: false     |
 ### association
-* has_many :posts
-* has_many :comments
-* has_many :man-tweets
-* has_many :woman-tweets
-## man-tweets
-|種類        | Column     | Type       | Options      |追記           |
-|-----------|------------|-------------|--------------|--------------|
-|画像|    |  | null: false  | ActiveStorage |
-|名前| name | string  | null: false ||
-|説明| description  | text | null: false |
-|| user | references | null: false, foreign_key: true ||
-### association
-* belongs_to :user
-* has_many :comments
-* has_one_attached: image
-* has_many :posts
-## woman-tweets
-|種類        | Column     | Type       | Options      |追記           |
-|-----------|------------|-------------|--------------|--------------|
-|画像|    |  | null: false  | ActiveStorage |
-|名前| name | string  | null: false ||
-|説明| description  | text | null: false |
-|| user | references | null: false, foreign_key: true ||
-### association
-* belongs_to :user
-* has_many :comments
-* has_one_attached: image
-* has_many :posts
-## Comments
-|種類        | Column     | Type       | Options      |
-|-----------|------------|-------------|--------------|
-|| comment   | string      | null: false  |
-|| user | references | null: false, foreign_key: true  |
-|| man-tweet | references | null: false, foreign_key: true  |
-|| woman-tweet | references | null: false, foreign_key: true  |
-### association
-* belongs_to :user
-* belongs_to :man-tweet
-* belongs_to :woman-tweet
-## posts
-|種類        | Column     | Type       | Options      |
-|-----------|------------|-------------|--------------|
-|| user | references | null: false, foreign_key: true  |
-|| man-tweet | references | null: false, foreign_key: true  |
-|| woman-tweet | references | null: false, foreign_key: true  |
-### association
-* belongs_to :user
-* belongs_to :man-tweet
-* belongs_to :woman-tweet
-* ...
-
-
 * ...

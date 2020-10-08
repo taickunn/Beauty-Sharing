@@ -1,0 +1,296 @@
+
+.back-content {
+  height: 550px;
+  background-image: url('/assets/images/girl.png');
+  background-position: left top;
+	background-repeat: no-repeat;
+  background-size: 2000px 600px;
+  text-align: left;
+}
+
+.login {
+  font-size: 80px;
+  color: skyblue;
+  font-family: 'Oswald', sans-serif;
+  opacity: 0.6;
+  padding-left: 250px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+.btn {
+  padding: 32px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.7; 
+  border-radius: 4px
+}
+
+.btn :hover {
+  opacity: 1;
+}
+
+.signup {
+  background-color: #239b76;
+  height: 23px;
+  margin-left: 100px;
+}
+
+.signin {
+  background-color: rgb(212, 127, 29);
+  height: 23px;
+  padding: 30px;
+  margin-left: 50px;
+}
+
+.facebook {
+  background-color: #3b5998;
+  margin: 0 30px;
+  height: 23px;
+  
+}
+
+.twitter {
+  background-color: #55acee;
+  height: 23px;
+  
+}
+
+.btn-wrapper {
+  display: flex;
+  padding-right: 40px;
+  padding-top: 100px;
+  margin-right: 40px;
+}
+
+
+.btn-wrapper p {
+  margin: 30px 0;
+  padding-left: 90px;
+  font-size: 40px;
+  font-family: 'Londrina Shadow', cursive;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+.images {
+  height: 400px;
+  margin-top: 100px;
+  display: flex;
+  background-color: violet;
+}
+
+.man-image{
+  height: 500px;
+  width: 50%;
+  background-image: url('/assets/images/men.png');
+	background-repeat: no-repeat;
+  background-size: 1300px 600px;
+  }
+
+.woman-image{
+  height: 500px;
+  width: 50%;
+  background-image: url('/assets/images/woman.png');
+  background-repeat: no-repeat;
+  background-size: 100% 500px;
+  
+}
+
+.contents {
+  height: 400px;
+  background-color: turquoise;
+  display: flex;
+
+}
+
+.man-content {
+  height: 400px;
+  width: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.man-menu {
+  height: 250px;
+  width: 700px;
+  background-color: rgb(0, 183, 255);
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gender-man {
+  font-size: 150px;
+  font-family: 'Londrina Shadow', cursive;
+  color: white;
+}
+
+.woman-content{
+  height: 400px;
+  width: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.woman-menu {
+  height: 250px;
+  width: 700px;
+  background-color: violet;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gender-woman {
+  font-size: 150px;
+  font-family: 'Londrina Shadow', cursive;
+  color: white;
+}
+
+.lists {
+  height: 150px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.man-lists {
+  height: 100px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.man-list {
+  height:100px;
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  font-size: 71px;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.man-list a {
+  color: #333;
+  font-family: 'Nico Moji', cursive;
+  margin: 30px 6px;
+}
+
+.man-list1 span {
+  display: inline-block;
+}
+
+.man-list1:hover span {
+  animation: hoveMenuAnime 0.5s ease-in;
+}
+
+@keyframes hoveMenuAnime {
+
+  0% {
+    opacity: 1;
+    transform: translateY(0px)scaleY(1);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(10px)scaleY(0);
+  }
+  51% {
+    transform: translateY(-10px)scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px)scaleY(1);
+  }
+}
+
+.man-list2 span {
+  display: inline-block;
+}
+
+.man-list2:hover span {
+  animation: hoveMenuAnime 0.5s ease-in;
+}
+
+.woman-lists {
+  height: 100px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.woman-list {
+  height:100px;
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  font-size: 71px;
+  opacity: 0.6;
+  display: none;
+}
+
+.woman-list a {
+  color: #333;
+  font-family: 'Nico Moji', cursive;
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.woman-list1 span {
+  display: inline-block;
+}
+
+.woman-list1:hover span {
+  animation: hoveMenuAnime 0.5s ease-in;
+}
+
+.woman-list2 span {
+  display: inline-block;
+}
+
+.woman-list2:hover span {
+  animation: hoveMenuAnime 0.5s ease-in;
+}
+
+li{
+  list-style: none;
+}
+
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-top: 30px;
+  font-size: 50px;
+  font-family: 'Nico Moji', cursive;
+}
+
+.logout {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+  padding-left: 50px;
+  font-size: 50px;
+  font-family: 'Nico Moji', cursive;
+}

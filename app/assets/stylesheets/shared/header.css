@@ -1,0 +1,20 @@
+.top-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 60px;
+  font-family: 'Caveat', cursive;
+
+}
+
+.hasami-icon {
+  height: 100px;
+
+}
+
+.make-icon {
+  height: 100px;
+}
