@@ -1,0 +1,68 @@
+.name {
+  font-size: 100px;
+  padding-left: 750px;
+  padding-top: 100px;
+  background-color: gainsboro;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.item-img-content {
+  width: 100vw;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.iine {
+  width: 100vw;
+  height: 200px;
+  background-color: white;
+}
+
+.show-btn {
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item-red-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  width: 500px;
+  height: 500px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+  transition: .4s;
+  font-size: 80px;
+}
+
+.item-red-btn:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+.item-destroy {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  width: 500px;
+  height: 500px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+  transition: .4s;
+  font-size: 80px;
+}
+
+.item-destroy:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}

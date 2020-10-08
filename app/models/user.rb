@@ -9,4 +9,6 @@ class User < ApplicationRecord
   end
       
     belongs_to :post, optional: true
+     has_many :comments
+     has_many :mantweets
 end

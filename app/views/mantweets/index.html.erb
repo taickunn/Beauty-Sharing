@@ -1,2 +1,26 @@
 <%= render "shared/header" %>
 
+<div class="man-toppage">
+  <h1>Man</h1>
+</div>
+
+<div class="man-tweetbtn">
+  <a href="/posts/:post_id/mantweets/new" class="btn-square-above-look">ツイート</a>
+</div>
+
+ <div class="image-list">
+  <% @mantweet.each do |mantweet| %> 
+       <li class='list'>
+        <%= link_to post_mantweet_path(id: mantweet) do %>
+          <div class='item-img-content'>
+          <%= image_tag mantweet.image, class: "item-img" %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= mantweet.name %>
+          </h3>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+</div> 
