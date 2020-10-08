@@ -1,0 +1,102 @@
+<%= render "shared/header" %>
+
+<div class="main">
+
+
+  <div class="back-content">
+    <% if user_signed_in? %>
+    <div class="log-in">
+      <h1 class="login">Welcome</h1>
+    </div>
+    <% else %>
+    <div class="log-in">
+      <h1 class="login">Login</h1>
+    </div>
+    <% end %> 
+    <div class="btn-wrapper">
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+        <% else %>
+          <li><%= link_to 'ログイン', new_user_session_path , class: "btn signin" %></li>
+          <li><%= link_to '新規登録はこちら', new_user_registration_path , class: "btn signup" %></li>
+          <a href="#" class="btn facebook">
+            <span class="fa fa-facebook"></span>
+            Facebookで登録
+          </a>
+          <a href="#" class="btn twitter">
+            <span class="fa fa-twitter"></span>
+            Twitterで登録
+          </a>
+      <% end %>    
+    </div>
+  </div>
+</div>
+  
+  <div class="images">
+
+    <div class="man-image">
+    </div>
+
+    <div class="woman-image">
+    </div>
+
+  </div>
+
+
+  <div class="contents">
+
+    <div class="man-content">
+
+      <div class="man-menu" id="man-lists">
+        <h1 class="gender-man">Man</h1>
+      </div> 
+      
+    </div>
+
+
+    <div class="woman-content">
+
+      <div class="woman-menu" id="woman-lists">
+        <h1 class="gender-woman">Woman</h1>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="lists">
+
+    <div class="man-lists">
+      <ul class="man-list" id="man-pull-down">
+
+        <li><a href="/posts/:post_id/mantweets" class="man-list1"><span>H</span><span>a</span><span>i</span><span>r</span><span>S</span><span>t</span><span>y</span><span>l</span><span>e</span></a>
+        </li>
+    
+        <li><a href="#" class="man-list2"><span>M</span><span>a</span><span>k</span><span>e</span></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="woman-lists">
+      <nav class="woman-list" id="woman-pull-down">
+        <li><a href="#" class="woman-list1"><span>H</span><span>a</span><span>i</span><span>r</span><span>S</span><span>t</span><span>y</span><span>l</span><span>e</span></a>
+        </li>
+        <li><a href="#" class="woman-list2"><span>M</span><span>a</span><span>k</span><span>e</span></a>
+        </li>
+      </nav>
+    </div>
+
+
+  </div>
+
+
+
+
+  <%# 商品一覧 %>
+  <%# <div class='item-contents'>
+    <h3 class='title'>新着ヘアスタイル</h3>
+    <ul class='item-lists'>
+    </div>
+
+    <div class="main">
+    </div> %>
