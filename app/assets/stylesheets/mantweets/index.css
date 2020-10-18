@@ -15,7 +15,6 @@
 
 .man-tweetbtn {
   height: 300px;
-  background-color: turquoise;
   display: flex;
   justify-content: center;
 }
@@ -63,8 +62,9 @@
   border-width: 6px;
 }
 
-.image-list {
-  padding-left: 450px;
+.item-explain-box {
+  font-size: 50px;
+  margin: 40px 0px;
 }
 
 .item-info {

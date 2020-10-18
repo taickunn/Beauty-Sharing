@@ -1,41 +1,40 @@
 <%= render "shared/header" %>
 
-<div class="items-sell-main">
-    <h2 class="items-sell-title">情報を入力</h2>
-    <%= form_with model: @mantweet, url: "/posts/:post_id/mantweets/:id", local: true do |f| %>
+<div class="edit-items-sell-main">
+    <h2 class="edit-items-sell-title">情報を入力</h2>
+    <%= form_with model: @mantweet, url: "/mantweets/:id", local: true do |f| %>
 
-    <div class="img-upload">
-      <div class="weight-bold-text">
+    <div class="edit-img-upload">
+      <div class="edit-weight-bold-text">
         スタイル画像
-        <span class="indispensable">必須</span>
+        <span class="edit-indispensable">必須</span>
       </div>
-      <div class="click-upload">
+      <div class="edit-click-upload">
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"item-image" %>
+        <%= f.file_field :image, id:"edit-item-image" %>
       </div>
     </div>
   
-    <div class="new-items">
-      <div class="weight-bold-text">
+    <div class="edit-new-items">
+      <div class="edit-weight-bold-text">
         スタイル名
-        <span class="indispensable">必須</span>
+        <span class="edit-indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"スタイル名", maxlength:"40" %>
-      <div class="items-explain">
-        <div class="weight-bold-text">
+      <%= f.text_field :name, class:"edit-items-text", id:"edit-item-name", placeholder:"スタイル名", maxlength:"40" %>
+      <div class="edit-items-explain">
+        <div class="edit-weight-bold-text">
           説明
-          <span class="indispensable">必須</span>
+          <span class="edit-indispensable">必須</span>
         </div>
-        <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"説明（必須 1,000文字まで）（スタイル造りのコツ、注意点など）例）刈り上げマッシュスタイルです。" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :description, class:"edit-items-text", id:"item-info", placeholder:"説明（必須 1,000文字まで）（スタイル造りのコツ、注意点など）例）刈り上げマッシュスタイルです。" ,rows:"7" ,maxlength:"1000" %>
       </div>
     </div>
 
-    <div class="sell-btn-contents">
-      <%= f.submit "完了" ,class:"sell-btn" %>
-      <%=link_to 'もどる', post_mantweet_path, class:"back-btn" %>
+    <div class="edit-sell-btn-contents">
+      <%= f.submit "完了" ,class:"edit-sell-btn" %>
+      <%=link_to 'もどる', mantweet_path, class:"edit-back-btn" %>
     </div>
-  </div>
   <% end %>
 </div>

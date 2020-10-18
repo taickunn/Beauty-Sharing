@@ -66,3 +66,46 @@
   -webkit-transform: rotate(10deg);
   transform: rotate(10deg);
 }
+
+textarea {
+  width: 500px;
+  height: 200px;
+  margin-top: 200px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.comments {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 50px 620px;
+}
+
+strong {
+  margin-top: 50px;
+}
+
+strong a {
+  color: #333;
+  margin: 50px 0;
+}
+
+ .container-comment{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.container-comment:active {
+  background: #67c5ff;
+  color: white;
+}

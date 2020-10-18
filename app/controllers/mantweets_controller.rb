@@ -17,21 +17,24 @@ class MantweetsController < ApplicationController
   def create
     @mantweet = Mantweet.new(mantweet_params)
     if @mantweet.save
-      redirect_to post_mantweets_path
+      redirect_to mantweets_path
     else
       render :new
     end
   end
 
   def show
+    @comment = Comment.new
+    @comments = @mantweet.comments.includes(:user)
   end
 
   def edit
   end
 
-  def update
+  def update 
+
     if @mantweet.update(mantweet_params)
-      redirect_to post_mantweet_path
+      redirect_to mantweet_path
     else
       render :edit
     end

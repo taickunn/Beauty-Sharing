@@ -5,13 +5,13 @@
 </div>
 
 <div class="man-tweetbtn">
-  <a href="/posts/:post_id/mantweets/new" class="btn-square-above-look">ツイート</a>
+  <a href="/mantweets/new" class="btn-square-above-look">ツイート</a>
 </div>
 
  <div class="image-list">
   <% @mantweet.each do |mantweet| %> 
        <li class='list'>
-        <%= link_to post_mantweet_path(id: mantweet) do %>
+        <%= link_to mantweet_path(mantweet.id) do %>
           <div class='item-img-content'>
           <%= image_tag mantweet.image, class: "item-img" %>
         </div>

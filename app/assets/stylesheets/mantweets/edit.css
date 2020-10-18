@@ -1,4 +1,4 @@
-.items-sell-contents {
+.edit-items-sell-contents {
   background-color: #f5f5f5;
   font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
   font-size: 14px;
@@ -8,26 +8,26 @@
   min-width: 500px;
 }
 
-.items-sell-header {
+.edit-items-sell-header {
   padding: 5vh 0;
   text-align: center;
 }
 
-.items-sell-main {
+.edit-items-sell-main {
   background-color: #FFF;
   width: 70vw;
   min-width: 450px;
   padding: 10vh 15vw;
 }
 
-.items-sell-title {
+.edit-items-sell-title {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
 }
 
 /* 共通 */
-.indispensable {
+.edit-indispensable {
   background: #ea352d;
   margin-left: 8px;
   padding: 3px;
@@ -37,20 +37,20 @@
   font-weight: bold;
 }
 
-.weight-bold-text {
+.edit-weight-bold-text {
   font-weight: bold;
   min-width: 170px;
   margin-bottom: 10px;
 }
 
-.select-box {
+.edit-select-box {
   height: 30px;
   width: 100%;
   background-color: #f5f5f5;
   padding-left: 20px;
 }
 
-.question {
+.edit-question {
   width: 20px;
   height: 20px;
   border-radius: 10px;
@@ -63,37 +63,37 @@
   margin-left: 5px;
 }
 
-.question-text {
+.edit-question-text {
   display: flex;
 }
 
 /* /共通 */
 
 /* 出品画像 */
-.img-upload {
+.edit-img-upload {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 2vh 0;
 }
 
-.click-upload {
+.edit-click-upload {
   margin: 15px 0;
   min-width: 250px;
 }
 
-.click-upload>p {
+.edit-click-upload>p {
   margin-bottom: 15px;
 }
 
 /* /出品画像 */
 
 /* 商品名と商品説明 */
-.new-items {
+.edit-new-items {
   padding: 2vh 0;
 }
 
-.items-text {
+.edit-items-text {
   width: 100%;
   padding: 16px 16px 8px;
   border-radius: 4px;
@@ -103,19 +103,19 @@
   margin-top: 50px;
 }
 
-.items-explain {
+.edit-items-explain {
   margin-top: 2vh;
 }
 
 /* /商品名と商品説明 */
 
 /* 下部ボタン */
-.sell-btn-contents {
+.edit-sell-btn-contents {
   width: 100%;
   text-align: center;
 }
 
-.sell-btn {
+.edit-sell-btn {
   background: skyblue;
   border: 1px solid skyblue;
   color: #fff;
@@ -125,7 +125,7 @@
   margin-bottom: 4vh;
 }
 
-.back-btn {
+.edit-back-btn {
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
@@ -135,7 +135,7 @@
 
 /* /下部ボタン */
 
-.items-sell-footer {
+.edit-items-sell-footer {
   background-color: #f5f5f5;
   width: 60vw;
   padding: 3ch 0;
@@ -145,19 +145,19 @@
 }
 
 
-.items-sell-footer>.menu {
+.edit-items-sell-footer>.menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 3vh 0;
 }
 
-.menu>li>a {
+.edit-menu>li>a {
   color: black;
   font-size: 12px;
   margin: 2vw;
 }
 
-.inc {
+.edi-inc {
   font-size: 13px;
 }

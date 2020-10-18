@@ -2,7 +2,7 @@
 
 <div class="items-sell-main">
     <h2 class="items-sell-title">情報を入力</h2>
-    <%= form_with model: @mantweet, url: "/posts/:post_id/mantweets", local: true do |f| %>
+    <%= form_with model: @mantweet, url: "/mantweets", local: true do |f| %>
 
     <div class="img-upload">
       <div class="weight-bold-text">
@@ -22,7 +22,7 @@
         スタイル名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"スタイル名", maxlength:"40" %>
+      <%= f.text_field :name, class:"items-text", id:"item-name", placeholder:"スタイル名", maxlength:"40" %>
       <div class="items-explain">
         <div class="weight-bold-text">
           説明

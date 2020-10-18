@@ -4,6 +4,7 @@ class CreateMantweets < ActiveRecord::Migration[6.0]
       t.string  :name,                     null: false
       t.text    :description,              null: false
       t.references :user,                  null: false, forgin_key: true
+      
       t.timestamps
     end
   end

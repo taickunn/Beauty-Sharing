@@ -10,13 +10,38 @@
     </div>  
   </div> 
 
+  <div class="item-explain-box">
+      <span><%= @mantweet.description %></span>
+    </div>
+
   <div class="iine">
   </div>
 
   <% if user_signed_in? && current_user.id == @mantweet.user_id %>
   <div class="show-btn">
-    <%= link_to '編集', edit_post_mantweet_path, method: :get, class: "item-red-btn" %>
+    <%= link_to '編集', edit_mantweet_path , method: :get, class: "item-red-btn" %>
     <%= link_to '削除', "#", method: :delete, class:'item-destroy' %>
   </div>
   <% end %>
+<div class="container">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@mantweet, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.submit "コメント", class:"container-comment" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+  </div>
+  <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <strong><%= link_to comment.text, "/mantweets/:mantweet_id/comments/:id#{comment.id}" %></strong>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
 </div>      

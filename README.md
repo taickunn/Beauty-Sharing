@@ -35,12 +35,11 @@ Things you may want to cover:
 |名前| name | string  | null: false ||
 |説明| description  | text | null: false |
 || user | references | null: false, foreign_key: true ||
-|| post | references | null: false, foreign_key: true  |
 ### association
 * belongs_to :user
 * has_many :comments
 * has_one_attached: image
-* has_many :posts
+* belongs_to :posts
 ## woman-tweets
 |種類        | Column     | Type       | Options      |追記           |
 |-----------|------------|-------------|--------------|--------------|
