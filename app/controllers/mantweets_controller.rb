@@ -24,8 +24,8 @@ class MantweetsController < ApplicationController
   end
 
   def show
-    @comment = Comment.new
-    @comments = @mantweet.comments.includes(:user)
+    @comments = @mantweet.comments
+    @comment = @mantweet.comments.build
   end
 
   def edit
