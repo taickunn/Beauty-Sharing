@@ -8,6 +8,13 @@ class User < ApplicationRecord
     validates :nickname
   end
       
-     has_many :comments
-     has_many :mantweets
+  has_many :comments
+  has_many :mantweet, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+
+  def already_favorited?(mantweet)
+    self.favorites.exists?(mantweet_id: mantweet.id)
+  end
+     
+
 end

@@ -14,12 +14,21 @@
       <span><%= @mantweet.description %></span>
     </div>
 
-  <div class="iine">
-  </div>
+<% if current_user.already_favorited?(@mantweet) %>
+            <%= link_to mantweet_favorites_path(@mantweet), method: :delete do %>
+              <i class="fas fa-heart"></i>
+            <% end %>
+            <%= @mantweet.favorites.count %>
+          <% else %>
+            <%= link_to mantweet_favorites_path(@mantweet), method: :post do %>
+              <i class="far fa-heart"></i>
+            <% end %>
+            <%= @mantweet.favorites.count %>
+          <% end %>
 
   <% if user_signed_in? && current_user.id == @mantweet.user_id %>
   <div class="show-btn">
-    <%= link_to '編集', edit_mantweet_path , method: :get, class: "item-red-btn" %>
+    <%= link_to '編集', edit_mantweet_path(@mantweet.id) , method: :get, class: "item-red-btn" %>
     <%= link_to '削除', "#", method: :delete, class:'item-destroy' %>
   </div>
   <% end %>

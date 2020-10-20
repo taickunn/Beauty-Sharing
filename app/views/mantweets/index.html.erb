@@ -8,19 +8,13 @@
   <a href="/mantweets/new" class="btn-square-above-look">ツイート</a>
 </div>
 
- <div class="image-list">
+ <tbody>
   <% @mantweet.each do |mantweet| %> 
-       <li class='list'>
-        <%= link_to mantweet_path(mantweet.id) do %>
-          <div class='item-img-content'>
-          <%= image_tag mantweet.image, class: "item-img" %>
-        </div>
-        <div class='item-info'>
-          <h3 class='item-name'>
-            <%= mantweet.name %>
-          </h3>
-        </div>
-        <% end %>
-      </li>
+  <tr>
+    <%= link_to mantweet.name, mantweet_path(mantweet) do %>
+    <td><%= mantweet.user.nickname %></td>
+    <td><%= mantweet.image %></td>
+    <% end %>
+  </tr>
       <% end %>
-</div> 
+  </tbody>
