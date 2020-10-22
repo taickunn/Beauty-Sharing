@@ -20,53 +20,6 @@
   background-color: white;
 }
 
-.show-btn {
-  width: 100vw;
-  height: 500px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.item-red-btn {
-  display: inline-block;
-  text-decoration: none;
-  color: #FFF;
-  width: 500px;
-  height: 500px;
-  line-height: 120px;
-  border-radius: 50%;
-  text-align: center;
-  overflow: hidden;
-  background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
-  transition: .4s;
-  font-size: 80px;
-}
-
-.item-red-btn:hover {
-  -webkit-transform: rotate(10deg);
-  transform: rotate(10deg);
-}
-
-.item-destroy {
-  display: inline-block;
-  text-decoration: none;
-  color: #FFF;
-  width: 500px;
-  height: 500px;
-  line-height: 120px;
-  border-radius: 50%;
-  text-align: center;
-  overflow: hidden;
-  background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
-  transition: .4s;
-  font-size: 80px;
-}
-
-.item-destroy:hover {
-  -webkit-transform: rotate(10deg);
-  transform: rotate(10deg);
-}
-
 textarea {
   width: 500px;
   height: 200px;
@@ -74,7 +27,22 @@ textarea {
 }
 
 .mt-5 {
-  margin-top: 300px;
+  padding-top: 300px;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.mt {
+  font-size: 20px;
+}
+
+.mt-3 {
+  font-size: 25px;
+  
+}
+
+.mt-4 {
+  margin: 10px 0;
 }
 
 .btnbtn-successfloat-rightmt-1 {
@@ -82,3 +50,36 @@ textarea {
   color: white;
   border-color: white;
 }
+
+.description {
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  width: 100vw;
+  font-size: 33px;
+}
+
+.favorite {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+.fa-heart {
+  font-size: 5.0em;
+  
+  color: #333;
+}
+
+.heart_red{
+  color:#e54747;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+}
+
+

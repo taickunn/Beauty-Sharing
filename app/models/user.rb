@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :comments
   has_many :mantweet, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  attachment :profile_image
 
   def already_favorited?(mantweet)
     self.favorites.exists?(mantweet_id: mantweet.id)

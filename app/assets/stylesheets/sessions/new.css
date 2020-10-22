@@ -15,23 +15,14 @@
   font-size: 40px;
   padding-left: 400px;
 }
-.actions-blue-btn:active {
-  /*ボタンを押したとき*/
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);/*下に動く*/
-  border-bottom: none;/*線を消す*/
+
+.actions {
+  margin-top: 30px;
 }
 
-.actions-blue-btn {
-  height: 150px;
-  width: 220px;
-  display: inline-block;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  background: #668ad8;/*ボタン色*/
-  color: #FFF;
-  border-bottom: solid 4px #627295;
-  border-radius: 3px;
-  font-size: 30px;
-  margin-left: 1000px;
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
 }

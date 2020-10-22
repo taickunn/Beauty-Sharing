@@ -5,16 +5,41 @@
 </div>
 
 <div class="man-tweetbtn">
-  <a href="/mantweets/new" class="btn-square-above-look">ツイート</a>
+<%= link_to "投稿する", new_mantweet_path(@mantweet), class: "far fa-plus-square", style: "color: skyblue;" %>
 </div>
 
- <tbody>
-  <% @mantweet.each do |mantweet| %> 
-  <tr>
-    <%= link_to mantweet.name, mantweet_path(mantweet) do %>
-    <td><%= mantweet.user.nickname %></td>
-    <td><%= mantweet.image %></td>
-    <% end %>
-  </tr>
+ <section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <% @mantweet.each do |mantweet| %>
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <%= link_to mantweet_path(mantweet) do %>
+                  <%= attachment_image_tag mantweet, :image %>
+                <% end %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <%= attachment_image_tag mantweet.user, :profile_image, fallback: "no-image.png", class: "profile_image" %>
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <div class="title"><%=link_to mantweet.user.nickname, user_path(mantweet.user) %></div>
+                </div>
+              </div>
+
+              <div class="content">
+                <time><%= mantweet.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
+              </div>
+            </div>
+          </div>
+        </div>
       <% end %>
-  </tbody>
+    </div>
+  </div>
+</section>
