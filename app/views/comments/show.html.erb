@@ -1,13 +1,31 @@
 <%= render "shared/header" %>
 
-<div class="comments-text">
-  <strong><%= link_to @comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-  <strong><%= link_to @comment.text, "/mantweets/:mantweet_id/comments/:id#{comment.id}" %></strong>
+
+<div class="mt-edit">
+<div class="mt">
+      <% unless @comments.user.blank? %>
+      <figure class="image is-48x48">
+        <%= attachment_image_tag @comments.mantweet.user, :profile_image, fallback: "no-image.png", class: "profile_image" %>
+      </figure>
+        <a href="<%= user_path(@comments.user_id) %>">
+          <div class="mt-3" style="color: #333;">
+            <%= @comments.user.nickname unless @comments.user.blank? %>
+          </div>
+        </a>
+            <% end %>
+      <br />
+      <a href="<%= mantweet_comment_path(:id) %>">
+        <div class="mt-4" style="color: #333;">
+          <%= @comments.text %>
+        </div>
+      </a>
+    </div>
+    <br />
 </div>
 
-<% if user_signed_in? && current_user.id == @mantweet.user_id %>
+<% if user_signed_in? && current_user.id == @comments.user_id %>
   <div class="show-btn">
-    <%= link_to '編集', edit_mantweet_path , method: :get, class: "item-red-btn" %>
-    <%= link_to '削除', "#", method: :delete, class:'item-destroy' %>
+    <%= link_to '編集', edit_mantweet_comment_path(@comment) , method: :get, class: "far fa-edit", style="font-size: 30px; color: #333; margin-right: 30px;" %> 
+    <%= link_to '削除', mantweet_comment_path , method: :delete, class:'far fa-trash-alt' %>
   </div>
   <% end %>

@@ -6,16 +6,22 @@
 
 .title {
   font-size: 60px;
+  display: flex;
+  align-items: center;
   font-family: 'Caveat', cursive;
   color: #333;
 
 }
 
 .hasami-icon {
-  height: 100px;
+  height: 80px;
 
 }
 
 .make-icon {
+  height: 80px;
+}
+
+header {
   height: 100px;
 }

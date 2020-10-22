@@ -1,40 +1,48 @@
 <%= render "shared/header" %>
 
-<div class="edit-items-sell-main">
-    <h2 class="edit-items-sell-title">情報を入力</h2>
-    <%= form_with model: @mantweet, url: "/mantweets/:id", local: true do |f| %>
+<section class="hero is-success">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title" style="color: black;">
+        スタイル編集
+      </h1>
+    </div>
+  </div>
+</section>
 
-    <div class="edit-img-upload">
-      <div class="edit-weight-bold-text">
-        スタイル画像
-        <span class="edit-indispensable">必須</span>
-      </div>
-      <div class="edit-click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"edit-item-image" %>
-      </div>
-    </div>
-  
-    <div class="edit-new-items">
-      <div class="edit-weight-bold-text">
-        スタイル名
-        <span class="edit-indispensable">必須</span>
-      </div>
-      <%= f.text_field :name, class:"edit-items-text", id:"edit-item-name", placeholder:"スタイル名", maxlength:"40" %>
-      <div class="edit-items-explain">
-        <div class="edit-weight-bold-text">
-          説明
-          <span class="edit-indispensable">必須</span>
-        </div>
-        <%= f.text_area :description, class:"edit-items-text", id:"item-info", placeholder:"説明（必須 1,000文字まで）（スタイル造りのコツ、注意点など）例）刈り上げマッシュスタイルです。" ,rows:"7" ,maxlength:"1000" %>
-      </div>
-    </div>
+<% if @mantweet.errors.any? %>
+  <div class="notification is-danger">
+    <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+    <ul>
+      <% @mantweet.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 
-    <div class="edit-sell-btn-contents">
-      <%= f.submit "完了" ,class:"edit-sell-btn" %>
-      <%=link_to 'もどる', mantweet_path, class:"edit-back-btn" %>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-13">
+        <%= form_for @mantweet do |f| %>
+          <div class="field">
+            <%= f.label :title, "スタイル名", class: "label" %>
+            <%= f.text_field :title, class: "input" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :body, "説明", class: "label" %>
+            <%= f.text_area :body, class: "textarea" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :image, "写真", class: "label" %>
+            <%= f.attachment_field :image, class: "input" %>
+          </div>
+          <%= f.submit '更新', class: "button is-success" %>
+        <% end %>
+      </div>
     </div>
-  <% end %>
-</div>
+  </div>
+</section>

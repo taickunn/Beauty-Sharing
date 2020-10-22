@@ -1,6 +1,6 @@
 class MantweetsController < ApplicationController
 
-  before_action :set_mantweet, only: [:show, :edit, :update]
+  before_action :set_mantweet, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create]
 
 
@@ -32,7 +32,6 @@ class MantweetsController < ApplicationController
   end
 
   def update 
-
     if @mantweet.update(mantweet_params)
       redirect_to mantweet_path
     else
@@ -41,12 +40,17 @@ class MantweetsController < ApplicationController
   end
 
   def destroy
+    if @mantweet.destroy
+      redirect_to mantweets_path
+    else
+      render :index
+    end
   end
 
   private
   
     def mantweet_params
-      params.require(:mantweet).permit(:name, :description, :image).merge(user_id: current_user.id)
+      params.require(:mantweet).permit(:title, :body, :image).merge(user_id: current_user.id)
     end
 
     def set_mantweet

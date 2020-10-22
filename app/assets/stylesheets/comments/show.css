@@ -1,0 +1,22 @@
+.mt-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-btn {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* .fa-edit {
+  font-size: 30px;
+  color: #333;
+  margin-right: 30px;
+} */
+
+.fa-trash-alt {
+  font-size: 30px;
+  color: #333;
+}
