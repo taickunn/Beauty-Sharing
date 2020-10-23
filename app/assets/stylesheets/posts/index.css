@@ -294,3 +294,18 @@ li{
   font-size: 50px;
   font-family: 'Nico Moji', cursive;
 }
+
+.slider {
+  width: 900px;
+  margin: 50px auto;
+}
+
+.slider li {
+  font-size: 80px;
+}
+
+.slider img {
+  width: 900px;
+  height: 506px;
+}
+
