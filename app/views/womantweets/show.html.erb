@@ -17,13 +17,13 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <%= attachment_image_tag @mantweet, :image %>
+              <%= attachment_image_tag @womantweet, :image %>
             </figure>
           </div>
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title is-5"><%= @mantweet.title %></p>
+                <p class="title is-5"><%= @womantweet.title %></p>
               </div>
             </div>
             <div class="content">
@@ -32,12 +32,12 @@
                   <th>説明</th>
                 </tr>
                 <tr>
-                  <td><%= simple_format @mantweet.body %></td>
+                  <td><%= simple_format @womantweet.body %></td>
                 </tr>
               </table>
-              <% if @mantweet.user.id == current_user.id %>
-                <%= link_to "編集", edit_mantweet_path(@mantweet), class: "button is-success" %>
-                <%= link_to "削除", mantweet_path(@mantweet), method: :delete, class: "button is-success" %>
+              <% if @womantweet.user.id == current_user.id %>
+                <%= link_to "編集", edit_womantweet_path(@womantweet), class: "button is-success" %>
+                <%= link_to "削除", womantweet_path(@womantweet), method: :delete, class: "button is-success" %>
               <% end %>
             </div>
           </div>
@@ -47,18 +47,18 @@
       <div class="column is-4">
         <article class="panel is-link">
           <p class="panel-heading">
-          <%= @mantweet.user.nickname %>
+          <%= @womantweet.user.nickname %>
           </p>
           <div class="panel-block">
             <p class="control">
-              <%= @mantweet.user.profile %>
+              <%= @womantweet.user.profile %>
             </p>
           </div>
-          <%= link_to user_path(@mantweet.user), class: "panel-block" do %>
+          <%= link_to user_path(@womantweet.user), class: "panel-block" do %>
             <span class="panel-icon">
               <i class="fas fa-user" aria-hidden="true"></i>
             </span>
-            <%= @mantweet.user.nickname %> さんのページへ
+            <%= @womantweet.user.nickname %> さんのページへ
           <% end %>
         </article>
       </div>
@@ -67,23 +67,23 @@
 </section>
 
 <div class="favorite">
-<% if current_user.already_favorited?(@mantweet) %>
-            <%= link_to mantweet_favorites_path(@mantweet), method: :delete do %>
+<% if current_user.already_secondfavorited?(@womantweet) %>
+            <%= link_to womantweet_secondfavorites_path(@womantweet), method: :delete do %>
               <i class="fas fa-heart heart_red">
-              <%= @mantweet.favorites.count %></i>
+              <%= @womantweet.secondfavorites.count %></i>
             <% end %>
             
           <% else %>
-            <%= link_to mantweet_favorites_path(@mantweet), method: :post do %>
+            <%= link_to womantweet_secondfavorites_path(@womantweet), method: :post do %>
               <i class="far fa-heart">
-              <%= @mantweet.favorites.count %></i>
+              <%= @womantweet.secondfavorites.count %></i>
             <% end %>
             
           <% end %>
 
 <div class="comment-wrapper border-top mb-10">
   <p class="mt-5">コメント一覧</p>
-  <% @comments.each do |c| %>
+  <% @secondcomments.each do |c| %>
     <div class="mt">
       <% unless c.user.blank? %>
       <figure class="image is-48x48">
@@ -96,7 +96,7 @@
         </a>
             <% end %>
       <br />
-      <a href="<%= mantweet_comment_path(:id) %>"></a>
+      <a href="<%= womantweet_secondcomment_path(:id) %>"></a>
         <div class="mt-4">
           <%= c.text %>
         </div>
@@ -104,7 +104,7 @@
     <br />
   <% end %>
   <% if user_signed_in? %>
-    <%= form_with(model: [@mantweet, @comment], local: true) do |f| %>
+    <%= form_with(model: [@womantweet, @secondcomment], local: true) do |f| %>
       <%= f.text_area :text, class: "form-control", rows: 5 %>
       <%= button_tag type: "submit", class: "btnbtn-successfloat-rightmt-1" do %>
         <i class="far fa-comments"></i> コメントする

@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     resource :favorites, only: [:create, :destroy]
     resources :comments, only: [:create, :show, :edit, :update, :destroy]
     end
+    resources :womantweets do
+      resource :secondfavorites, only: [:create, :destroy]
+      resources :secondcomments, only: [:create, :show, :edit, :update, :destroy]
+    end
     resources :users
     resources :posts, only:[:index]
   

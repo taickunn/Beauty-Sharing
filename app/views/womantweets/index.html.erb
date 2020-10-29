@@ -2,24 +2,24 @@
 
 
 
-<div class="man-toppage">
-  <h1>Man</h1>
+<div class="woman-toppage">
+  <h1>Woman</h1>
 </div>
 
-<div class="man-tweetbtn">
-<%= link_to "投稿する", new_mantweet_path(@mantweet), class: "far fa-plus-square", style: "color: skyblue;" %>
+<div class="woman-tweetbtn">
+<%= link_to "投稿する", new_womantweet_path(@womantweet), class: "far fa-plus-square", style: "color:  violet;" %>
 </div>
 
  <section class="section">
   <div class="container">
     <div class="columns is-multiline">
-      <% @mantweet.each do |mantweet| %>
+      <% @womantweet.each do |womantweet| %>
         <div class="column is-4">
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <%= link_to mantweet_path(mantweet) do %>
-                  <%= attachment_image_tag mantweet, :image %>
+                <%= link_to womantweet_path(womantweet) do %>
+                  <%= attachment_image_tag womantweet, :image %>
                 <% end %>
               </figure>
             </div>
@@ -27,16 +27,16 @@
               <div class="media">
                 <div class="media-left">
                   <figure class="image is-48x48">
-                    <%= attachment_image_tag mantweet.user, :profile_image, fallback: "no-image.png", class: "profile_image" %>
+                    <%= attachment_image_tag womantweet.user, :profile_image, fallback: "no-image.png", class: "profile_image" %>
                   </figure>
                 </div>
                 <div class="media-content">
-                  <div class="title"><%=link_to mantweet.user.nickname, user_path(mantweet.user) %></div>
+                  <div class="title"><%=link_to womantweet.user.nickname, user_path(womantweet.user) %></div>
                 </div>
               </div>
 
               <div class="content">
-                <time><%= mantweet.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
+                <time><%= womantweet.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
               </div>
             </div>
           </div>

@@ -13,23 +13,6 @@
       <h1 class="login">Login</h1>
     </div>
     <% end %> 
-    <div class="btn-wrapper">
-      <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
-        <% else %>
-          <li><%= link_to 'ログイン', new_user_session_path , class: "btn signin" %></li>
-          <li><%= link_to '新規登録はこちら', new_user_registration_path , class: "btn signup" %></li>
-          <a href="#" class="btn facebook">
-            <span class="fa fa-facebook"></span>
-            Facebookで登録
-          </a>
-          <a href="#" class="btn twitter">
-            <span class="fa fa-twitter"></span>
-            Twitterで登録
-          </a>
-      <% end %>    
-    </div>
   </div>
 </div>
   
@@ -76,7 +59,7 @@
 
     <div class="woman-lists">
       <ul class="woman-list" id="woman-pull-down">
-        <li><a href="#" class="woman-list1"><span>H</span><span>a</span><span>i</span><span>r</span><span>S</span><span>t</span><span>y</span><span>l</span><span>e</span></a>
+        <li><a href="/womantweets" class="woman-list1"><span>H</span><span>a</span><span>i</span><span>r</span><span>S</span><span>t</span><span>y</span><span>l</span><span>e</span></a>
         </li>
       </ul>
     </div>
@@ -91,7 +74,10 @@
     <h2 style="font-size: 100px; color: #333; margin-left: 770px; margin-bottom: 100px;">Pic Up✨</h2>
     <%# スライドショー配置 %>
       <ul class="slider">
-        <li>man<%= link_to image_tag("04afbee243816ec7606982a67b17e96d.png"), "http://localhost:3000/mantweets/5" %>
+        <li>man<%= link_to image_tag("04afbee243816ec7606982a67b17e96d.png"), "http://localhost:3000/mantweets/4" %>
         <li>man<%= link_to image_tag("man.png"), "http://localhost:3000/mantweets/7" %>
-        <li>man<%= link_to image_tag("original.png"), "http://localhost:3000/mantweets/4" %>
+        <li>man<%= link_to image_tag("original.png"), "http://localhost:3000/mantweets/6" %>
+        <li>woman<%= link_to image_tag("ddcae418d463574fd99b6d16812eec50.png"), "http://localhost:3000/womantweets/7" %>
+        <li>woman<%= link_to image_tag("a2a02c67a0e37ff8e1a7b257b1cb63ea.png"), "http://localhost:3000/womantweets/6" %>
+        <li>woman<%= link_to image_tag("411c9c9e44dff740a541353dfdff3c43.png"), "http://localhost:3000/womantweets/5" %>
       </ul>

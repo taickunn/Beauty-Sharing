@@ -1,0 +1,2 @@
+module SecondfavoritesHelper
+end

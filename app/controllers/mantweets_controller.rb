@@ -6,6 +6,7 @@ class MantweetsController < ApplicationController
 
 
 
+
   def index
     @mantweet = Mantweet.all.order("created_at DESC")
   end
@@ -47,6 +48,8 @@ class MantweetsController < ApplicationController
     end
   end
 
+  
+
   private
   
     def mantweet_params
@@ -56,6 +59,8 @@ class MantweetsController < ApplicationController
     def set_mantweet
       @mantweet = Mantweet.find(params[:id])
     end
+
+    
 
 
 end
