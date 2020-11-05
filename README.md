@@ -17,60 +17,83 @@ Things you may want to cover:
 |ニックネーム| nickname   | string      | null: false  |
 |メールアドレス| email  | string  | null: false, uniqueness: true       |
 |パスワード| password  | string  | null: false |
-|苗字| family_name    | string     | null: false           |
-|名前| first_name       | string       | null: false       |
-|苗字（かな）| family_name_kana    | string     | null: false      |
-|名前（かな）| first_name_kana | string   | null: false    |
-|生年月日| birth_day   | date     | null: false     |
+|プロフィール| profile   | text     |           |
+|プロフィール画像| profile_image_id     | string       |     |
 ### association
 ### association
-* belongs_to :post
-* has_many :comments
-* has_many :man-tweets
-* has_many :woman-tweets
+ * has_many :comments
+ * has_many :mantweet, dependent: :destroy
+ * has_many :favorites, dependent: :destroy
+ * has_many :womantweet, dependent: :destroy
+ * has_many :secondfavorites, dependent: :destroy
+ * attachment :profile_image
+  ## posts
+|種類        | Column     | Type       | Options      |追記           |
+|-----------|------------|-------------|--------------|--------------|
+|           |  name  | string      |              |  |
+|           | description      | text      |              |   |
 ## man-tweets
 |種類        | Column     | Type       | Options      |追記           |
 |-----------|------------|-------------|--------------|--------------|
-|画像|    |  | null: false  | ActiveStorage |
-|名前| name | string  | null: false ||
-|説明| description  | text | null: false |
-|| user | references | null: false, foreign_key: true ||
+|画像        |  image_id  | string      |              |  |
+|名前        | title      | string      |              |   |
+|説明        | body       | text        |              |
+|ユーザーid   | user_id    | integer     |              |   |
 ### association
+* attachment :image
 * belongs_to :user
 * has_many :comments
-* has_one_attached: image
-* belongs_to :posts
+* has_many :favorites, dependent: :destroy
+
 ## woman-tweets
 |種類        | Column     | Type       | Options      |追記           |
 |-----------|------------|-------------|--------------|--------------|
-|画像|    |  | null: false  | ActiveStorage |
-|名前| name | string  | null: false ||
-|説明| description  | text | null: false |
-|| user | references | null: false, foreign_key: true ||
-|| post | references | null: false, foreign_key: true  |
+|画像        |  image_id  | string      |              |  |
+|名前        | title      | string      |              |   |
+|説明        | body       | text        |              |
+|ユーザーid   | user_id    | integer     |              |   |
 ### association
+* attachment :image
 * belongs_to :user
-* has_many :comments
-* has_one_attached: image
-* has_many :posts
-## Comments
+* has_many :secondcomments
+* has_many :secondfavorites, dependent: :destroy
+## comments
 |種類        | Column     | Type       | Options      |
 |-----------|------------|-------------|--------------|
-|| comment   | string      | null: false  |
-|| user | references | null: false, foreign_key: true  |
-|| man-tweet | references | null: false, foreign_key: true  |
-|| woman-tweet | references | null: false, foreign_key: true  |
+|| user_id  | integer    | |
+|| mantweet_id| integer    | |
+|| text     | text       | |
 ### association
+* belongs_to :mantweet
 * belongs_to :user
-* belongs_to :man-tweet
-* belongs_to :woman-tweet
-## posts
+## second-comments
 |種類        | Column     | Type       | Options      |
 |-----------|------------|-------------|--------------|
-
+|| user_id  | integer    | |
+|| womantweet_id| integer    | |
+|| text     | text       | |
 ### association
-* has_many :users
-* has_many :man-tweets
-* has_many :woman-tweets
+* belongs_to :womantweet
+* belongs_to :user
+## favorite
+|種類        | Column     | Type       | Options      |
+|-----------|------------|-------------|--------------|
+|| user_id  | integer    | |
+|| mantweet_id| integer    | |
+|| text     | text       | |
+### association
+* belongs_to :user
+* belongs_to :mantweet
+* validates_uniqueness_of :mantweet_id, scope: :user_id
+## second-favorite
+|種類        | Column     | Type       | Options      |
+|-----------|------------|-------------|--------------|
+|| user_id  | integer    | |
+|| womantweet_id| integer    | |
+|| text     | text       | |
+### association
+* belongs_to :user
+* belongs_to :womantweet
+* validates_uniqueness_of :womantweet_id, scope: :user_id
 * ...
 
