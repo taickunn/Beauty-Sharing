@@ -7,4 +7,10 @@ class Womantweet < ApplicationRecord
   has_many :secondfavorites, dependent: :destroy
 
 
+  with_options presence: true do
+    validates :title
+    validates :body
+    validates :image_id
+  end
+  
 end
