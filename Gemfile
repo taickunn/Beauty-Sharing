@@ -62,3 +62,6 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem "bulma-rails"
 gem 'bulma-sass'
+group :production do
+  gem 'rails_12factor'
+end
