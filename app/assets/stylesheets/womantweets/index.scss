@@ -1,19 +1,19 @@
-.man-toppage {
+.woman-toppage {
   width: 100vw;
   height: 600px;
-  background-image: url('/assets/images/men.png');
+  background-image: image-url('/assets/images/woman.png');
   padding-top: 50px;
 }
 
-.man-toppage h1 {
-  font-size: 220px;
+.woman-toppage h1 {
+  font-size: 200px;
   padding-left: 1150px;
   padding-top: 300px;
   font-family: cursive;
   color: #333;
 }
 
-.man-tweetbtn {
+.woman-tweetbtn {
   height: 300px;
   display: flex;
   justify-content: center;

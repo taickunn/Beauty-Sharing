@@ -1,7 +1,7 @@
 
 .back-content {
   height: 550px;
-  background-image: url('/assets/images/girl.png');
+  background-image: image-url('/assets/images/girl.png');
   background-position: left top;
 	background-repeat: no-repeat;
   background-size: 2000px 600px;
@@ -90,7 +90,7 @@ a {
 .man-image{
   height: 500px;
   width: 50%;
-  background-image: url('/assets/images/men.png');
+  background-image: image-url('/assets/images/men.png');
 	background-repeat: no-repeat;
   background-size: 1300px 600px;
   }
@@ -98,7 +98,7 @@ a {
 .woman-image{
   height: 500px;
   width: 50%;
-  background-image: url('/assets/images/woman.png');
+  background-image: image-url('/assets/images/woman.png');
   background-repeat: no-repeat;
   background-size: 100% 500px;
   
