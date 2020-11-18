@@ -2,6 +2,7 @@
 .back-content {
   height: 550px;
   background-image: url('/assets/images/girl.png');
+  background-image: url-image('/assets/images/girl.png');
   background-position: left top;
 	background-repeat: no-repeat;
   background-size: 2000px 600px;
