@@ -1,5 +1,6 @@
 # README
-<h1 align=“center”>Beauty Sharing
+<h1 align=“center”>Beauty Sharing</h1>
+
 - 若者向けの美容共有サイト
 - 私自身、美容特化のsnsってあまり無いなと思い、作成いたしました。
 - 自分の美的価値観を色々なユーザーと共有しあえる<b>「情報共有サービス」</b>です。
