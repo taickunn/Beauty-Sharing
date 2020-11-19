@@ -12,11 +12,13 @@ Beauty Sharing
 - 作成期間 2020/9/28 ~ 2020/10/28
 
 <h1 align=“center”>本番環境</h1>
+
 https://beauty-sharing.herokuapp.com/
 
 ログイン情報（テスト用）
 
 ・email: sample@sample.com
+
 ・password: test123
 
 <h1 align=“center”>制作背景</h1>
@@ -25,7 +27,9 @@ https://beauty-sharing.herokuapp.com/
 
 <h1 align=“center”>工夫したポイント</h1>
 ・主なターゲットが、弱年齢層なので、使いやすいと言うよりは少し遊び心のあるデザインに致しました
+
 ・メンズとレディースを分ける事によってほしい情報が一気に絞れるように致しました
+
 ・ヘアスタイルとメイクなどを選択する事によってさらに情報絞るように致しました
 
 <h1 align=“center”>使用技術（開発環境）</h1>
@@ -56,7 +60,9 @@ VSCode
 
 <h1 align=“center”>課題や今後実装したい機能</h1>
 ・自分の探している情報を素早くキャッチするために検索機能を追加
+
 ・情報収集のために美容系のニュース機能
+
 ・コミュニケーションの為のフォロー＆DM機能
 
 <h1 align=“center”>DB設計</h1>
