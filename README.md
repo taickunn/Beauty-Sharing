@@ -1,13 +1,33 @@
 # README
-<h1 align=“center”>Beauty Sharing</h1>
+<h1 align=“center”>アプリ名</h1>
+Beauty Sharing
 
+<h1 align=“center”>概要</h1>
 - 若者向けの美容共有サイト
 - 私自身、美容特化のsnsってあまり無いなと思い、作成いたしました。
 - 自分の美的価値観を色々なユーザーと共有しあえる<b>「情報共有サービス」</b>です。
 - 作成期間 2020/9/28 ~ 2020/10/28
-- https://rails-connect.com/
- ![top_page](https://i.gyazo.com/ec902bbeb37996a96d1e9c9b74bebef9.png)
-<br>
+
+<h1 align=“center”>本番環境</h1>
+https://beauty-sharing.herokuapp.com/
+
+ログイン情報（テスト用）
+
+・email: sample@sample.com
+・password: test123
+
+<h1 align=“center”>制作背景</h1>
+
+<h1 align=“center”>DEMO</h1>
+
+<h1 align=“center”>工夫したポイント</h1>
+
+<h1 align=“center”>使用技術（開発環境）</h1>
+<h2>バックエンド</h2>
+
+<h1 align=“center”>課題や今後実装したい機能</h1>
+
+<h1 align=“center”>DB設計</h1>
 
 
 ## users
