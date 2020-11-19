@@ -26,6 +26,7 @@ https://beauty-sharing.herokuapp.com/
 <h1 align=“center”>DEMO</h1>
 
 <h1 align=“center”>工夫したポイント</h1>
+
 ・主なターゲットが、弱年齢層なので、使いやすいと言うよりは少し遊び心のあるデザインに致しました
 
 ・メンズとレディースを分ける事によってほしい情報が一気に絞れるように致しました
